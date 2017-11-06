@@ -27,36 +27,16 @@
 
 			<div class="categories">
 
-<<<<<<< HEAD
-				<a th:each="category: ${categories-template}"
-					th:href="@{'/category?id=' + ${category.id}}"> <img
-					id="category-image" th:src="${category.imageUrl}" /></a>
-
-			</div>
-
-			<a th:each="category: ${categoriesList}"
-				th:href="@{/category(id=${category.id})}"> <img
-				class="categoryImage" th:src="${category.image}"></img>
-			</a>
-
-
-=======
 				<a th:each="category: ${modelCategories}"
 					th:href="@{/allreviews?(id=${category.categoryName})}"> <img
 					id="category-image" th:src="${category.categoryImage}" /></a>
-
 			</div>
 
->>>>>>> upstream/master
 		</section>
 
 	</div>
 
 </body>
 
-<<<<<<< HEAD
 </html>
 
-=======
-</html>
->>>>>>> upstream/master
