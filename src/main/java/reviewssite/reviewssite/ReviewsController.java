@@ -30,11 +30,6 @@ public class ReviewsController {
 		return "reviews-template";
 	}
 
-	@RequestMapping("/category")
-	public String fetchCategory(@RequestParam("id") long id, Model model) {
-		model.addAttribute("modelReview", categoryRepos.findOne(id));
-		return "category-template";
-	}
 
 	@RequestMapping("/categories")
 	public String findCategory(@RequestParam("id") long id, Model model) {

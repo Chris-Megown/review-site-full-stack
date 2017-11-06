@@ -4,7 +4,7 @@
 
 <head>
 
-<title>Hero Categories</title>
+<title>Super Heroes</title>
 
 <link href="../static/css/style.css" th:href="@{/css/style.css}"
 	rel="stylesheet" />
@@ -13,30 +13,30 @@
 
 <body>
 
-	<div class="grid">
+	<div class="container">
 
 		<header>
 
-			<h1>Best of Columbus: Cheap Food</h1>
-
-			<h2>Take a look below for ways to fill your belly without
-				emptying your coffers.</h2>
+			<h1>DC and Marvel Super Heroes</h1>
 
 		</header>
 
-		<section class="categories">
+		<h2>Choose a category</h2>
 
-			<div class="individualreview" th:each="category: ${modelReviews}">
+		<section class="category-container">
 
-				<a th:href="@{'/review?id=' + ${review.id}}"><p id="hero"
-						th:text="${review.hero}" /></a>
+			<div class="categories">
 
-
-				<img id="image" th:src="${review.imageUrl}" />
-
-
+				<a th:each="category: ${categories-template}"
+					th:href="@{'/category?id=' + ${category.id}}"> <img
+					id="category-image" th:src="${category.imageUrl}" /></a>
 
 			</div>
+
+			<a th:each="category: ${categoriesList}"
+				th:href="@{/category(id=${category.id})}"> <img
+				class="categoryImage" th:src="${category.image}"></img>
+			</a>
 
 
 		</section>
@@ -45,4 +45,5 @@
 
 </body>
 
-</html>l>
+</html>
+
