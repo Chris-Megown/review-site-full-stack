@@ -16,8 +16,6 @@ public class ReviewsController {
 	@Resource
 	private CategoryReposirty categoryRepos;
 
-	// LET'S CHANGE RETURNS TO ACTUAL NAMES NOT TEMPLATES
-	// ALSO MAKE A POTENTIAL HOME PAGE WITH A BREIF DESCRIPTION?!?
 	@RequestMapping("/review")
 	public String fetchReview(@RequestParam("id") long id, Model model) {
 		model.addAttribute("modelReview", reviewRepos.findOne(id));
@@ -25,13 +23,12 @@ public class ReviewsController {
 	}
 
 	@RequestMapping("/allreviews")
-	public String showAll(Model model) {
-		model.addAttribute("modelReviews", reviewRepos.findAll());
+	public String showAll(@RequestParam("id") long id, Model model) {
+		model.addAttribute("modelReviews", categoryRepos.findOne(id));
 		return "reviews-template";
 	}
 
 	@RequestMapping("/categories")
-
 	public String findCategory(Model model) {
 		model.addAttribute("modelCategories", categoryRepos.findAll());
 		return "categories-template";
