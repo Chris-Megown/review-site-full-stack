@@ -18,36 +18,29 @@ public class ReviewPopulator implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		// Category things
-		Category DC = new Category("DC", "imageurl");
+		Category DC = new Category("DC", "images/dc/dc_logo_clear.png");
 		categoryRepos.save(DC);
-		
-		Category Marvel = new Category("Marvel", "imageUrl");
+
+		Category Marvel = new Category("Marvel", "images/marvel/marvel.png");
 		categoryRepos.save(Marvel);
 
-
-		Review superman = new Review(1, "The Glenn Beck ($3.00)", "images/hotdog.jpg", "DC",
-				"This place was hoppin at the lunch hour! A few people looked like they were on lunch break from work, but most people seemed like they were trying it for the first time. I saw families, young adults, older folks. It definitely attracts all kinds of people!",
-				"Dirty Frank\'s");
+		Review superman = new Review(1, "Superman", "Clark Kent, Kal-El", "images/hotdog.jpg", DC,
+				"Superman is the protagonist of Superman franchises, he is the first major superhero. Superman was born on the planet Krypton which was about to be destroyed when his mother and father sent their baby to planet Earth where he could survive. He was found by the Kents on their farm in Kansas after his spacecraft crash landed. They gave him his Earth name of Clark Kent. Superman is considered to be the most powerful superhero character of all time.");
 		reviewRepos.save(superman);
-		Review batman = new Review(2, "Pad Thai Lunch Special ($6.95)", "images/padthai.jpg", "DC",
-				"This place has the best lunch special in town.  Pay only $6.95 for an entree, eggroll, bowl of soup, and a drink for lunch.  This deal is one of the few that is valid 7 days a week!  Of course, the more authentic (and tastier) dishes are on the dinner menu for a few more dollars, but this is a definite go-to!  The Pad Thai comes with chicken, shrimp, or beef.  The chef makes his own chili sauce--definitely worth a try if you are a fan of spicy food.",
-				"Fortune");
+		Review batman = new Review(2, "Batman", "Bruce Wayne", "images/padthai.jpg", DC,
+				"Batman is the protagonist of the Batman comics, cartoon, movies, and video games franchises. His origin begins after experiencing the horrible death of his beloved parents at a young age. Bruce Wayne then travels the world learning different martial arts and fighting styles. Before returning to his home Gotham City, where he then creates a vigilante who will be known as Batman. He is largely considered one of the greatest superheroes of all time.");
 		reviewRepos.save(batman);
-		Review wonderwoman = new Review(3, "15 Layer Lasagna ($8.69)", "images/lasagna.jpg", "DC",
-				"Spaghetti Warehouse is the best value Italian in Columbus.  The 15 Layer Lasagna gets you a great bang for your buck.  I've never finished an entire portion of this lasagna.  It is cheesy and saucy.  It is a great lasagna for the price and you don't have to clean the lasagna pan.",
-				"Spaghetti Warehouse");
+		Review wonderwoman = new Review(3, "Wonder Woman", "Diana Prince", "images/lasagna.jpg", DC,
+				"Wonder Woman is the founding member of the Justice League along with being the protagonist of Wonder Woman franchises. She is an Amazon who fights injustice with ancient weapons, super strength, and the ability to fly.");
 		reviewRepos.save(wonderwoman);
-		Review daredevil = new Review(4, "Beechwold Burger ($6.75) ", "images/hamburger.jpg", "Marvil",
-				"The service was fast and friendly.  A few moments after I sat down, I was sipping on an ice tea.  You know how sometimes you get served ice tea that has been sitting around too long?  Welp, not here.  The ice tea was great.",
-				"Beechwold Diner");
+		Review daredevil = new Review(4, "Daredevil", "Matthew Michael Murdock", "images/hamburger.jpg", Marvel,
+				"Daredevil is a hero from Marvel who was blinded in an accident which also gave him a type of radar-sense that enhanced all his other senses more than a normal human being. By night he is a costumed vigilante, by day he is Matthew Michael Murdock a lawyer fighting for the good of his neighborhood Hell’s Kitchen.");
 		reviewRepos.save(daredevil);
-		Review starLord = new Review(5, "Bacon & Chicken Panini ($7.49)", "images/sandwich.jpg", "Marvil",
-				"You gotta go in for the full experience.  You walk in and the smell of everything delicious just hits you in the face and makes your mouth water.  I enjoyed every bite of the sandwich, and my side was the Pork Fat Roasted Potatoes (Yukon gold potatoes  and roasted directly under the Porchetta). The potatoes had a spicy kick in my mouth.",
-				"Carvery");
+		Review starLord = new Review(5, "Star Lord", "Peter Jason Quill", "images/sandwich.jpg", Marvel,
+				"Star Lord is a superhero who is the leader of the Guardians of the Galaxy. Created by Steve Englehart and Steve Gan, first appearing in 1976. Peter Quill is the son of a human mother and alien father, Quill assumes the mantle of Star-Lord, an interplanetary policeman… sort of.");
 		reviewRepos.save(starLord);
-		Review drStrange = new Review(6, "Grilled Cheese BS ($6.00)", "images/bsandwich.jpg", "Marvil",
-				"This is my go-to place in Columbus. The food is great and I love the self-serve pop. My favorite item on the menu is the Grilled Cheese BS.  It is a hard fried egg on texas toast with bacon and cheese.  It is buttery, toasted, and melted.  My favorite breakfast or breakfast for dinner in Columbus and for a great price - only $6.00.",
-				"DK Diner");
+		Review drStrange = new Review(6, "Doctor Strange", "alias here", "images/bsandwich.jpg", Marvel,
+				"Dr. Strange is a regular part of The Defenders. Unlike most heroes Doctor Strange deals with universe threatening events rather than petty crimes or silly world threats. He is titled the Sorcerer Supreme, a title which comes with the duty of protecting the universe against invading forces of evil from other realms.");
 		reviewRepos.save(drStrange);
 	}
 

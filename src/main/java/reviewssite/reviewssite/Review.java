@@ -20,7 +20,6 @@ public class Review {
 	private String hero;
 	private String alias;
 	private String imageUrl;
-	private String power;
 	@Lob
 	private String review;
 
@@ -29,13 +28,13 @@ public class Review {
 
 	// Review Constructor
 
-	public Review(long id, String hero, String alias, String imageUrl, String review, String power) {
+	public Review(long id, String hero, String alias, String imageUrl, Category category, String review) {
 		this.id = id;
 		this.hero = hero;
 		this.alias = alias;
 		this.imageUrl = imageUrl;
+		this.category = category;
 		this.review = review;
-		this.power = power;
 	}
 
 	// making JPA happy
@@ -64,8 +63,7 @@ public class Review {
 		return review;
 	}
 
-	public String getPower() {
-		return power;
+	public Category getCategory() {
+		return category;
 	}
-
 }

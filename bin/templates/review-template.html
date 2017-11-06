@@ -22,11 +22,11 @@
 		<section class="EachReview">
 
 			<h2>
-				<p id="cuisine" th:text="${modelReview.alias}" />
+				<p id="hero" th:text="${modelReview.alias}" />
 			</h2>
 
 			<h2>
-				<p id="power" th:text="${modelReview.power}" />
+				<p id="alias" th:text="${modelReview.power}" />
 			</h2>
 
 			<img id="image" th:src="${modelReview.imageUrl}" />
@@ -37,7 +37,7 @@
 		</section>
 	</div>
 	<footer>
-		<a th:href="@{'/allreviews'}">Home</a>
+		<a th:href="@{'/categories'}">Home</a>
 	</footer>
 
 </body>

@@ -17,10 +17,9 @@
 
 		<header>
 
-			<h1>Best of Columbus: Cheap Food</h1>
+			<h1>Chosen category heros</h1>
 
-			<h2>Take a look below for ways to fill your belly without
-				emptying your coffers.</h2>
+			<h2>Chose a hero</h2>
 
 		</header>
 		<!-- this needs an IF statement to iterate the different reviews per category called upon -->
@@ -33,14 +32,15 @@
 						th:text="${review.hero}" /></a> <img id="image"
 					th:src="${review.imageUrl}" />
 
-
-
 			</div>
-
 
 		</section>
 
 	</div>
+
+	<footer>
+		<a th:href="@{'/categories'}">Home</a>
+	</footer>
 
 </body>
 
