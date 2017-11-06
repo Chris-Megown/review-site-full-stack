@@ -24,7 +24,11 @@ public class ReviewsController {
 
 	@RequestMapping("/allreviews")
 	public String showAll(@RequestParam("id") long id, Model model) {
+<<<<<<< HEAD
 		model.addAttribute("modelReviews", categoryRepos.findOne(id));
+=======
+		model.addAttribute("modelCategory", categoryRepos.findOne(id));
+>>>>>>> upstream/master
 		return "reviews-template";
 	}
 

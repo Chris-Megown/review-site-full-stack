@@ -22,15 +22,14 @@
 			<h2>Chose a hero</h2>
 
 		</header>
-		<!-- this needs an IF statement to iterate the different reviews per category called upon -->
 
 		<section class="reviews">
 
-			<div class="individualreview" th:each="review: ${modelReviews}">
+			<div class="individualreview">
 
-				<a th:href="@{'/review?id=' + ${review.id}}"><p id="hero"
-						th:text="${review.hero}" /></a> <img id="image"
-					th:src="${review.imageUrl}" />
+				<a th:each="review: ${modelCategory.reviews}"
+					th:href="@{/review?(id=${review.id})}"> <img id="image"
+					th:src="${review.imageUrl}" /></a>
 
 			</div>
 

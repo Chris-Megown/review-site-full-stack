@@ -28,7 +28,7 @@
 			<div class="categories">
 
 				<a th:each="category: ${modelCategories}"
-					th:href="@{/allreviews?(id=${category.categoryName})}"> <img
+					th:href="@{/allreviews?(id=${category.id})}"> <img
 					id="category-image" th:src="${category.categoryImage}" /></a>
 			</div>
 

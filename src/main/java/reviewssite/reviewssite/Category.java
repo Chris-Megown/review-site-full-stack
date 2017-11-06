@@ -11,9 +11,8 @@ import javax.persistence.OneToMany;
 @Entity
 public class Category {
 
-	
 	// Variables
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
@@ -48,7 +47,7 @@ public class Category {
 		return categoryImage;
 	}
 
-	public Set<Review> getHeroSet() {
+	public Set<Review> getReviews() {
 		return reviews;
 	}
 

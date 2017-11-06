@@ -28,8 +28,7 @@ public class Review {
 
 	// Review Constructor
 
-	public Review(long id, String hero, String alias, String imageUrl, Category category, String review) {
-		this.id = id;
+	public Review(String hero, String alias, String imageUrl, Category category, String review) {
 		this.hero = hero;
 		this.alias = alias;
 		this.imageUrl = imageUrl;

@@ -22,11 +22,11 @@
 		<section class="EachReview">
 
 			<h2>
-				<p id="hero" th:text="${modelReview.alias}" />
+				<p id="alias" th:text="${modelReview.alias}" />
 			</h2>
 
 			<h2>
-				<p id="alias" th:text="${modelReview.power}" />
+				<p id="category" th:text="${modelReview.category.categoryName}" />
 			</h2>
 
 			<img id="image" th:src="${modelReview.imageUrl}" />
