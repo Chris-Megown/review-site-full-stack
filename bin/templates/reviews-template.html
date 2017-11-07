@@ -13,22 +13,23 @@
 
 <body>
 
-	<div class="grid">
+	<div class="category-container">
 
 		<header>
 
 			<h1>Chosen category heros</h1>
-
-			<h2>Chose a hero</h2>
-
+			
 		</header>
+
+		<h2>Chose a hero</h2>
 
 		<section class="reviews">
 
 			<div class="individualreview">
 
 				<a th:each="review: ${modelCategory.reviews}"
-					th:href="@{/review?(id=${review.id})}"> <img id="image"
+					th:href="@{/
+					review?(id=${review.id})}"> <img id="image"
 					th:src="${review.imageUrl}" /></a>
 
 			</div>
