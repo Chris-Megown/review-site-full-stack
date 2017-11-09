@@ -13,24 +13,29 @@
 
 <body>
 
-	<div class="container">
+	<div class="categorymenu">
 
 		<header>
 
-			<h1>DC and Marvel Super Heroes</h1>
+			<h1>Hero Collective</h1>
 
 		</header>
 
-		<h2>Choose a category</h2>
-
 		<section class="category-container">
 
+<<<<<<< HEAD
 			<div class="categories">
 
 				<a th:each="category: ${modelCategories}"
 					th:href="@{/allreviews?(id=${category.id})}"> <img
 					id="category-image" th:src="${category.categoryImage}" /></a>
 			</div>
+=======
+			<a th:each="category: ${modelCategories}"
+				th:href="@{/allreviews?(id=${category.id})}"> <img
+				class="repeatimage" id="category-image"
+				th:src="${category.categoryImage}" style="width: 50%;" /></a>
+>>>>>>> upstream/master
 
 		</section>
 
