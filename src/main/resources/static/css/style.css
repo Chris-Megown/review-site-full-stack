@@ -1,13 +1,37 @@
-/* .container {
+body {
+	background-color: #0000ff;
+}
+
+.category-container {
 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 85px auto auto auto 150px;
-	grid-gap: 5px;
-	grid-template-areas:
-	"header header header"
-	".  ."
-	".  ."
-	".  ."
-	".  ."; */
-	
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "header header header" ". individualreview ."
+		". footer .";
+	border: 10px solid black;
+}
+
+header {
+	grid-area: header;
+	text-align: center;
+	border: 10px solid black;
+}
+
+.individualreview {
+	grid-area: individualreview;
+	align-self: center;
+	text-align: center;
+}
+
+#category-image {
+	width: 350px;
+	height: auto;
+	text-align: center;
+	display: block;
+}
+
+footer {
+	grid-area: footer;
+	text-align: center;
+	border: 10px solid black;
 }

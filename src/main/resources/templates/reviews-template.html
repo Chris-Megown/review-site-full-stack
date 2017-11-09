@@ -2,12 +2,15 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <head>
 
-<title></title>
+<title>DC/Marvel</title>
 
-<link href="../static/css/style.css" th:href="@{/css/style.css}"
-	rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/style.css"></link>
 
 </head>
 
@@ -17,11 +20,9 @@
 
 		<header>
 
-			<h1>Chosen category heros</h1>
-			
-		</header>
+			<h1>Chosen category heroes</h1>
 
-		<h2>Chose a hero</h2>
+		</header>
 
 		<section class="reviews">
 
@@ -29,9 +30,8 @@
 
 				<a th:each="review: ${modelCategory.reviews}"
 					th:href="@{/
-					review?(id=${review.id})}"> <img id="image"
-					th:src="${review.imageUrl}" /></a>
-
+					review?(id=${review.id})}"> <img
+					id="category-image" th:src="${review.imageUrl}" /></a>
 			</div>
 
 		</section>
